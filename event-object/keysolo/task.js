@@ -17,6 +17,15 @@ class Game {
   }
 
   registerEvents() {
+    window.addEventListener('keydown', function(e) {
+      // symbolElements.forEach((sym, index) => {
+        if (this.currentSymbol === e.key) {
+          this.success;
+        } else {
+          this.fail;
+        }
+      
+    });
     /*
       TODO:
       Написать обработчик события, который откликается
