@@ -17,12 +17,13 @@ class Game {
   }
 
   registerEvents() {
-    window.addEventListener('keydown', function(e) {
+    window.addEventListener('keyup', function(e) {
+      console.log(this.currentSymbol.textContent, e.code, e.key);
       // symbolElements.forEach((sym, index) => {
-        if (this.currentSymbol === e.key) {
-          this.success;
+        if (this.currentSymbol.textContent === e.key) {
+          this.success();
         } else {
-          this.fail;
+          this.fail();
         }
       
     });
