@@ -17,9 +17,8 @@ class Game {
   }
 
   registerEvents() {
-    window.addEventListener('keyup', function(e) {
-      console.log(this.currentSymbol.textContent, e.code, e.key);
-      // symbolElements.forEach((sym, index) => {
+    window.addEventListener('keyup', (e) => {
+      // console.log(this.currentSymbol, e.code, e.key);
         if (this.currentSymbol.textContent === e.key) {
           this.success();
         } else {
